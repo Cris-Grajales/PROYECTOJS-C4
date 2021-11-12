@@ -2,6 +2,7 @@ const express = require('express');
 const app=express();
 const bodyParser = require('body-parser');
 
+
 //especificamos el subdirectorio donde se encuentran las páginas estáticas
 app.use(express.static(__dirname + '/public'));
 
@@ -13,14 +14,17 @@ app.post('/login', (req, res) => {
 		let password=req.body.password;
 		let usuario=req.body.username;
 		if(usuario=="admininicial" && password=="admin123456") {
-			res.send("Holis admin");
+			res.redirect('MenuPrincipal.html');
 		}
 		else {
-			res.redirect('/index.html');
+			res.redirect('/index.html?mens=Datos invalidos');
+			
+		
 		}
 })
+
 
 var server=app.listen(8081, () => {
     console.log('Servidor web iniciado');
   });
-  
+
