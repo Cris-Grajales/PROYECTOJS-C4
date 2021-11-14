@@ -17,18 +17,68 @@
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 
+   <!--css-->
+   <link rel="stylesheet"type="text/css"href="static/css/Menu.css">
+   
+
 </head>
 <body>
+    <div class="area"></div><nav class="main-menu">
+        <ul>
+        
+            <li>
+                <a href="Productos.html">
+                    <i class="fas fa-apple-alt fa-2x"></i>
+                    <span class="nav-text">
+                         PRODUCTOS
+                    </span>
+                </a>
+              
+            </li>
+            
+            
+            
+            <li> <br> </li>
+            
+            
+            <li class="has-subnav">
+                <a href="#">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    
+                    <span class="nav-text">
+                        CLIENTES
+                    </span>
+                </a>
+                
+            </li>
 
+        </ul>
+
+
+
+
+
+        <ul class="logout">
+            <li>
+               <a href="login.html">
+                     <i class="fa fa-power-off fa-2x"></i>
+                    <span class="nav-text">
+                        Logout
+                    </span>
+                </a>
+            </li>  
+        </ul>
+    </nav>
+    
     
 
-<form action="C_productos" method="post" enctype="multipart/form-data">
+<form action='/cargar'  method="post" enctype="multipart/form-data">
 
 <div class="container p-3 my-5 bg-info text-white">
 <div >
 
 <div class="row justify-content-center">
-<input type="file" value="Examinar" name="archivo" accept=".csv" id="archivoInput" onchange="return validarExt()">
+<input type="file" value="Examinar" name="file" accept=".csv" id="archivoInput">
 </div>
 
 <div class="row justify-content-center  my-2">
