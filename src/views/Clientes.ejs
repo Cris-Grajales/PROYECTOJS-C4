@@ -1,0 +1,104 @@
+<%-
+include ("partials/_header")
+%>
+
+<div class="container-fluid">
+    <div class="row p-3 my-5">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-3 p-3" style="background-color:lavender;">
+    
+          <form action="/add" method="POST">
+    
+            <table>
+              <tbody>
+                <tr>
+                  <tr><p>
+                      <input type="text" placeholder="Cedula" name="Cedula">
+                    </p></tr>
+                  <tr><p>
+                      <input type="text" placeholder="Nombre"
+                        name="Nombre">
+    
+                    </p></tr>
+                  <tr><p>
+                      <input type="text" placeholder="Direccion"
+                        name="Direccion">
+                    </p></tr>
+                  <tr><p>
+                      <input type="text" placeholder="Telefono"
+                        name="Telefono">
+    
+                    </p></tr>
+                  <tr><p>
+                      <input type="text" placeholder="Email"
+                        name="Email">
+                    </p></tr>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <tr>
+     <!--          <td><input type="submit" name="accion" value="Listar"
+                  class="next action-button"></td>--> 
+                <td><input type="submit" name="accion" value="Agregar"
+                  class="next action-button"></td>
+              </tr>
+            </table>
+          </form>
+    
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-7 " style="background-color:lavenderblush;">
+        
+    
+          <table class="table">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Cedula</th>
+                <th>Nombre</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for(var i= 0; i < tasks.length; i++){  %>
+                 <!-- <p><%= tasks[i] %></p> -->
+                 <tr>
+                  <td><%= i + 1 %></td>
+                  <td><%= tasks[i].Cedula %></td>
+                  <td><%= tasks[i].Nombre %></td>
+                  <td><%= tasks[i].Direccion %></td>
+                  <td><%= tasks[i].Telefono %></td>
+                  <td><%= tasks[i].Email %></td>
+    <!--              <td><input type="text" disabled="disabled" value="<%= i + 1 %>"></td>
+                    <td><input type="text" name="Cedula" value="<%= tasks[i].Cedula %>"></td>
+                    <td<input type="text" name="Nombre" value="<%= tasks[i].Nombre %>"></td>
+                    <td><input type="text" name="Direccion" value="<%= tasks[i].Direccion %>"></td>
+                    <td><input type="text" name="Telefono" value="<%= tasks[i].Telefono %>"></td>
+                    <td<input type="text" name="Email" value="><%= tasks[i].Email %>"></td>-->  
+                    <td>
+                       <a href="/delete/<%= tasks[i]._id %>" class="btn btn-danger">Delete</a>
+                       <a href="/edit/<%= tasks[i]._id %>" class="btn btn-primary">Edit</a>
+    
+                    </td>
+                 </tr>
+              <% } %>
+           </tbody>
+          </table>
+    
+    
+    
+    
+        </div>
+    </div>
+    </div>
+        
+
+
+<%-
+include ("partials/_footer")
+%>

@@ -1,0 +1,49 @@
+<%-
+include ("partials/_header")
+%>
+<form action='/cargar'  method="post" enctype="multipart/form-data">
+
+    <div class="container p-3 my-5 bg-info text-white">
+    <div >
+    
+    <div class="row justify-content-center">
+    <input type="file" value="Examinar" name="file" accept=".csv" id="archivoInput">
+    </div>
+    
+    <div class="row justify-content-center  my-2">
+    <button  class="btn btn-white" type="submit" name="cargar" >Cargar Productos </button>
+    </div>
+    </div>
+    </div>
+    </form>
+
+    <%   if(typeof message != "undefined" && message) { %>
+        <div class="container"> 
+            <div class="alert alert-success alert-dismissible fade show">
+                <strong><%=  message  %></strong>
+                <button type="button" class="close" data-dismiss="alert">
+                  <span>x</span>
+                </button>
+              </div>      
+            </div>
+        
+      <% }    %> 
+      
+      
+    <%   if(typeof message2 != "undefined" && message2) { %>
+        <div class="container"> 
+            <div class="alert alert-danger alert-dismissible fade show">
+                <strong><%=  message2  %></strong>
+                <button type="button" class="close" data-dismiss="alert">
+                  <span>x</span>
+                </button>
+              </div>      
+            </div>
+        
+      <% }    %> 
+      
+      
+
+<%-
+include ("partials/_footer")
+%>

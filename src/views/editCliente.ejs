@@ -1,0 +1,41 @@
+
+<%-
+include ("partials/_header")
+%>
+<div class="container-fluid">
+  <div class="row  p-3 my-5">
+    <div class="col-sm-4"></div>
+      <div class="col-sm-3 p-3" style="background-color:lavender;">
+  
+        <form action="/edit/<%= task._id %>" method="POST">
+  
+          <table class="justify-content-center">
+            <tbody>
+                <tr><p>
+              <input type="text" name="Cedula" class="form-control" value="<%= task.Cedula %>">
+              </p></tr>
+            <tr><p>
+              <input type="text" name="Nombre" class="form-control" value="<%= task.Nombre %>">
+              </p></tr>
+            <tr><p>
+              <input type="text" name="Direccion" class="form-control" value="<%= task.Direccion %>">
+              </p></tr>
+            <tr><p>
+              <input type="text" name="Telefono" class="form-control" value="<%= task.Telefono %>">
+              </p></tr>
+            <tr><p>
+              <input type="text" name="Email" class="form-control" value="<%= task.Email %>">
+              </p></tr>
+        </tbody>
+      </table>
+      <table>
+        <tr>
+          <button type="submit" class="btn btn-primary btn-block">Edit</button>
+        </tr>
+      </table>
+    </form>
+	</div>
+</div>
+</div>  
+</body>
+</html>
