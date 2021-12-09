@@ -1,0 +1,80 @@
+<%-
+include ("partials/_header")
+%>
+
+<%
+let codigo_venta = 1
+if(ventas.length>0){
+  codigo_venta = ventas[0].codigo_venta+1
+}
+%>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>VENTAS</title>
+  </head>
+  <body>
+      <div class="row" style="margin-top: 7%;">
+          <div class="col-12">
+              <div class="row" >
+                  <div class="col-3" style="margin-left: 25%">
+                      <div class="form-group">
+                          <label for="" >Cliente</label>
+                          <select name="" id="" class="form-control"></select>
+                      </div>
+                  </div>
+                  
+              </div>
+          </div>
+          <div class="col-6" style="margin-top: 6%">
+            <div class="row">
+                <div class="col-6" style="margin-left: 50%">
+                     <label for="" >Producto</label>
+                     <select name="" id="" class="form-control" > </select>
+                </div>
+                <div  class="form-group col-6" style="margin-left: 50%">
+                    <label for="" >Precio</label>
+                    <input type="text" class="form-control" disabled>
+                </div>
+                <div class="form-group col-6" style="margin-left: 50%">
+                    <label for="">Cantidad</label>
+                    <input type="text" class="form-control" disabled>
+                </div>
+                <div class="form-group" style="margin-top: 3%">
+                    <button class="btn btn-primary float-right" style="margin-left:85%">Agregar</button>
+                </div>
+          </div>
+
+          <div class="col-8" style="margin-left: 40%">
+              
+              <table class="table"style="margin-top: 5%">
+                  <thead>
+                      <tr>
+                          <th>Producto</th>
+                          <th>Cantidad</th>
+                          <th>Precio</th>
+                          <th>Sub Total</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+
+                  </tbody>
+                  <thead>
+                      <tr>
+                          <th colspan="3"></th>
+                        <th>Total: </th>
+                      </tr>
+                  </thead>
+              </table>
+              <button class="btn btn-success float-right">Guardar</button>
+          </div>
+      </div>
+</div>
+  <!--  Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

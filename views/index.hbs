@@ -1,0 +1,29 @@
+<h1>{{title}}</h1>
+
+<div>
+<form action="/saveitem" method="get">
+<button class="btn btn-default pull-right">Añadir Item Al Carrito</button>
+</form>
+</div>  
+<br>
+<br>
+{{# each products }}
+{{#each this}}
+<br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="thumbnail">
+        <div class="caption">
+          <h3>{{ this.title }}</h3>
+          <img src="{{ this.pathImage }}" alt="..." class="img-thumbnail img-responsive"> 
+            <p class="description">{{{this.description}}}</p>
+            <div class="clearfix">
+            <div class="price pull-left"><i class="fa fa-tag" aria-hidden="true"></i> {{ this.price }} $</div>
+              <a href="/add/{{ this.id }}" class="btn btn-default pull-right" role="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Añadir al carro</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/each}}  
+{{/each}}

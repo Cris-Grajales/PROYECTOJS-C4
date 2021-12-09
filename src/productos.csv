@@ -1,18 +1,6 @@
-codigo_producto,nombre_producto,nitproveedor,precio_compra,iva_compra,precio_venta
-987,papa,1,1000,19,1190
-989,yuca ,1,500,19,595
-991,leche ,1,300,19,357
-993,platano ,1,10000,19,11900
-995,apio,1,34,19,40
-997,huevos,1,98,19,117
-999,arroz,1,1865,19,2220
-1001,uvas,2,1758,19,2092
-1003,mora,2,1651,19,1965
-1005,yogur,2,1544,19,1838
-1007,carne,2,1437,19,1711
-1009,pollo,2,1330,19,1583
-1011,lechuga,3,1223,19,1456
-1013,manzana,3,1116,19,1329
-1015,fresa,3,1009,19,1201
-1017,melocoton,3,902,19,1074
-1019,coliflor,3,795,19,947
+title,description,price,pathImage
+papa,1,1500,papa.jfif
+manzana,2,1200,manzana.jfif
+lechuga,romana,1000,lechuga.jpg
+pollo,campesino,10000,pollo.jfif
+cafe,molido,2500,cafe.jfif

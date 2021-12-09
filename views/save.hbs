@@ -1,0 +1,31 @@
+    <title>{{title}}</title>
+
+<section class="insert">
+    <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+    <h3 class="bg-success">Añadir Items Para La Venta</h3>
+    <form action="/additem" method="post">
+        <div class="input">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title">
+        </div>
+        <div class="input">
+            <label for="descripcion">Description</label>
+            <input type="text" id="description" name="description">
+        </div>
+        <div class="input">
+            <label for="precio">Price</label>
+            <input type="text" id="price" name="price">
+        </div>
+        <div class="input">
+        <label for="imagen">Imagen</label>
+        <input type="text" id="pathImage" name="pathImage">  
+        </div> 
+        <br>                
+        <button type="submit">Insertar</button>
+        </form>
+        </section>
+        <br>
+        <a href="/"><i class="" aria-hidden="true"></i>Cancelar</a>
+        </div></div></div>

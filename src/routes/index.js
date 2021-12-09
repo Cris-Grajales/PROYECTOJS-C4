@@ -9,7 +9,7 @@ const mongodb = require('mongodb');
 const Task= require('../models/clienteModel');
 
 const fileUpload = require('express-fileupload')
-var url = "mongodb://localhost:27017/TiendaDB";
+var url = "mongodb+srv://admin:admin@cluster0.9rut7.mongodb.net/TiendaDB?retryWrites=true&w=majority";
  
 
 router.get('/', (req, res)=>{
@@ -70,17 +70,16 @@ router.post('/cargar',(req,res) => {
 	// Fetching the all data from each row
 	for (var i = 0; i < source.length; i++) {
 	   var oneRow = {
-		   codigo_producto: source[i]["codigo_producto"],
-		   nombre_producto: source[i]["nombre_producto"],
-		   nitproveedor: source[i]["nitproveedor"],
-		   precio_compra: source[i]["precio_compra"],
-		   iva_compra: source[i]["iva_compra"],
-		   precio_venta: source[i]["precio_venta"]
+		   title: source[i]["title"],
+		   description: source[i]["description"],
+		   price: source[i]["price"],
+		   pathImage: source[i]["pathImage"],
+		   
 	   };
 	   arrayToInsert.push(oneRow);
    }
    //inserting into the table 
-   var collectionName = 'productos';
+   var collectionName = 'products';
    var collection = dbConn.collection(collectionName);
 
    
