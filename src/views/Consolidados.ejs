@@ -1,0 +1,60 @@
+<%-
+include ("partials/_header")
+%>
+<% var Grantotal= 0%> 
+
+<div class="container-fluid">
+    <div class="row p-3 my-5">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4 p-3" style="background-color:lavenderblush;" > 
+          <h2>Consolidados por ciudad </h2>  
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 "></div>
+        <div class="col-sm-4 " style="background-color:lavenderblush;">
+        
+    
+          <table class="table">
+            <thead>
+              <tr>
+                <th>CIUDAD</th>
+                <th>TOTAL VENDIDO</th>
+               
+              </tr>
+            </thead>
+            <tbody>
+              <% for(var i= 0; i < tasks.length; i++){  %>
+                 <% 
+                 Grantotal= Grantotal+tasks[i].ValorTotal%> 
+              <% } %>
+              <tr>
+                  <td>Bogotá</td>
+                  <td><%=Grantotal%></td>
+              </tr>
+              <tr>
+                <td>Cali</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Medellin</td>
+                <td>0</td>
+            </tr>
+             
+              
+           </tbody>
+          </table>
+            
+
+    
+    
+    
+        </div>
+    </div>
+    </div>
+        
+
+
+<%-
+include ("partials/_footer")
+%>

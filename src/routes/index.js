@@ -7,10 +7,11 @@ const csvtojson = require('csvtojson');
 const mongodb = require('mongodb');
 
 const Task= require('../models/clienteModel');
+const Vent= require('../models/ventaModel');
 
 const fileUpload = require('express-fileupload')
 var url = "mongodb+srv://admin:admin@cluster0.9rut7.mongodb.net/TiendaDB?retryWrites=true&w=majority";
- 
+
 
 router.get('/', (req, res)=>{
     res.render('index');
@@ -22,6 +23,22 @@ router.get('/Clientes', async (req, res)=>{
     const tasks= await Task.find();
    console.log(tasks);
    res.render('Clientes',{ 
+      tasks
+    
+   });
+}) 
+
+router.get('/Reportes', async (req, res)=>{
+    const tasks= await Vent.find();
+   console.log(tasks);
+   res.render('Reportes',{ 
+      tasks
+   });
+}) 
+router.get('/Consolidados', async (req, res)=>{
+    const tasks= await Vent.find();
+   console.log(tasks);
+   res.render('Consolidados',{ 
       tasks
    });
 }) 

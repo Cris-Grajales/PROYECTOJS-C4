@@ -1,0 +1,58 @@
+<%-
+include ("partials/_header")
+%>
+<% var Grantotal= 0%> 
+
+<div class="container-fluid">
+    <div class="row p-3 my-5">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-3 p-3" style="background-color:lavenderblush;" > 
+          <h2>REPORTES DE VENTAS </h2>  
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-7 " style="background-color:lavenderblush;">
+        
+    
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Venta No</th>
+                <th>Cedula Cliente</th>
+                <th>Productos</th>
+               
+                <th>Valor Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for(var i= 0; i < tasks.length; i++){  %>
+                 <tr>
+                  <td><%= i + 1 %></td>
+                  <td><%= tasks[i].Cedula %></td>
+                  <td><%= tasks[i].Productos%></td>
+                 
+                  <td><%= tasks[i].ValorTotal %></td>
+                 </tr>
+                 <% 
+                 Grantotal= Grantotal+tasks[i].ValorTotal%> 
+              <% } %>
+             
+              
+           </tbody>
+          </table>
+          <br>
+         <h3>Sumatoria de ventas: <%=Grantotal%></h3>  
+
+    
+    
+    
+        </div>
+    </div>
+    </div>
+        
+
+
+<%-
+include ("partials/_footer")
+%>
